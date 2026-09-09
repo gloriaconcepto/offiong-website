@@ -4,36 +4,29 @@ import { AlertCircle, Home, ArrowLeft } from 'lucide-react';
 
 export const NotFoundPage: React.FC = () => {
   return (
-    <div className="container" style={{ textAlign: 'center', padding: '5rem 1rem' }}>
-      <div 
-        style={{ 
-          width: '72px', 
-          height: '72px', 
-          borderRadius: '50%', 
-          background: 'rgba(239, 68, 68, 0.1)', 
-          color: '#ef4444', 
-          display: 'flex', 
-          alignItems: 'center', 
-          justifyContent: 'center', 
-          margin: '0 auto 1.5rem',
-          border: '1px solid rgba(239, 68, 68, 0.25)' 
-        }}
-      >
-        <AlertCircle size={36} />
+    <div className="max-w-7xl mx-auto px-6 lg:px-8 py-28 text-center">
+      <div className="w-20 h-20 rounded-full bg-red-50 text-red-500 flex items-center justify-center mx-auto mb-6 border border-red-200">
+        <AlertCircle size={40} />
       </div>
-      <h1 style={{ fontSize: '3rem', fontWeight: 800, marginBottom: '0.75rem' }}>404</h1>
-      <h2 style={{ fontSize: '1.5rem', fontWeight: 700, marginBottom: '1rem', color: 'var(--text-primary)' }}>
+      <h1 className="font-display text-5xl font-bold text-slate-900 tracking-tight mb-2">404</h1>
+      <h2 className="font-display text-2xl font-bold text-slate-800 mb-3">
         Page Not Found
       </h2>
-      <p style={{ color: 'var(--text-secondary)', maxWidth: '480px', margin: '0 auto 2rem' }}>
-        The route you are looking for does not exist or has been moved. Check the URL or return back home.
+      <p className="text-slate-600 text-sm max-w-md mx-auto mb-8">
+        The requested technical resource or route does not exist. Please return to the corporate homepage or contact our Port Harcourt desk.
       </p>
-      <div style={{ display: 'flex', justifyContent: 'center', gap: '1rem' }}>
-        <Link to="/" className="btn btn-primary">
+      <div className="flex justify-center items-center gap-4">
+        <Link 
+          to="/" 
+          className="inline-flex items-center gap-2 bg-[#00503a] hover:bg-emerald-700 text-white font-display font-semibold text-sm px-6 py-3 rounded-lg shadow-sm transition-all"
+        >
           <Home size={16} />
-          <span>Back to Home</span>
+          <span>Return Home</span>
         </Link>
-        <button onClick={() => window.history.back()} className="btn btn-secondary">
+        <button 
+          onClick={() => window.history.back()} 
+          className="inline-flex items-center gap-2 bg-slate-100 hover:bg-slate-200 text-slate-800 font-display font-semibold text-sm px-6 py-3 rounded-lg border border-slate-200 transition-all"
+        >
           <ArrowLeft size={16} />
           <span>Go Back</span>
         </button>

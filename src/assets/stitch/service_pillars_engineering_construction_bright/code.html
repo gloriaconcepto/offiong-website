@@ -1,0 +1,610 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport">
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;family=Space+Grotesk:wght@600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "surface-container": "#f1f5f9",
+            "background": "#ffffff",
+            "surface": "#f8fafc",
+            "on-surface": "#0f172a",
+            "on-surface-variant": "#475569",
+            "primary": "#c2410c",
+            "primary-container": "#ea580c",
+            "on-primary": "#ffffff",
+            "secondary": "#2563eb",
+            "outline": "#cbd5e1",
+            "outline-variant": "#e2e8f0"
+          },
+          fontFamily: {
+            "headline": ["Space Grotesk", "sans-serif"],
+            "body": ["Manrope", "sans-serif"],
+            "code": ["JetBrains Mono", "monospace"]
+          }
+        }
+      }
+    };
+  </script>
+<style>
+    @layer base {
+      html, body {
+        width: 100vw;
+        margin: 0;
+        padding: 0;
+        background-color: #f8fafc;
+        color: #0f172a;
+      }
+      body {
+        overscroll-behavior: none;
+      }
+      .pb-safe {
+        padding-bottom: env(safe-area-inset-bottom, 0px);
+      }
+      .pt-safe {
+        padding-top: env(safe-area-inset-top, 0px);
+      }
+    }
+    ::-webkit-scrollbar {
+      display: none;
+    }
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-surface text-slate-900 font-body antialiased flex flex-col min-h-screen selection:bg-orange-100 selection:text-orange-900">
+<!-- Fixed Header -->
+<header class="fixed top-0 w-full z-50 pt-safe bg-white/95 backdrop-blur-md border-b border-slate-200/80 shadow-[0_1px_3px_rgba(0,0,0,0.03)]">
+<div class="h-16 px-4 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<img alt="J&amp;O Technical Services Logo" class="h-9 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCFLwplU9RRjhKKfPIidjUUbFR9QN-HLd9QPaSonrvgLbWdLkunJNx14p44PUo06QZbYiooQVpdL-indz0nZY6CmJs0o-JW87nn3VSfR7PB0mbUy6C5-Z6suJTjhizzeCUPpZzaxziRHuoKRVnZOCsYvz8wzeq-GjIaWV0ab-xbPshwhKp4_ATPWiaP9JP0jtsNUXJht80tVag_iES2S5mNZd5H_6IggnJWRxfiXbswH4trCxYjFdBxt9IjA3LTHr20">
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-headline font-bold text-base text-slate-900 tracking-tight leading-none">J&amp;O TECH</span>
+<span class="font-code text-[10px] px-1.5 py-0.5 bg-slate-100 text-slate-600 rounded font-medium border border-slate-200">RC: 9665822</span>
+</div>
+<span class="font-code text-[11px] text-slate-500 tracking-wider uppercase leading-none mt-1">Technical Services</span>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<a class="h-9 px-3 bg-orange-600 hover:bg-orange-700 text-white rounded-md font-code text-xs uppercase flex items-center justify-center gap-1.5 transition-colors font-semibold shadow-sm" href="tel:08062887287">
+<span class="material-symbols-outlined text-[16px]">call</span>
+<span>DISPATCH</span>
+</a>
+<div class="w-9 h-9 rounded-full bg-slate-100 border border-slate-200 text-slate-700 flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">person</span>
+</div>
+</div>
+</div>
+</header>
+<!-- Main Content -->
+<main class="flex-1 flex flex-col relative w-full pt-16 pb-24 bg-slate-50/50">
+<div class="flex flex-col w-full max-w-3xl mx-auto">
+<!-- Status Bar -->
+<div class="px-4 py-2.5 bg-white border-b border-slate-100 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+<span class="font-code text-xs text-slate-600 font-medium">CORE CAPABILITIES DOSSIER</span>
+</div>
+<div class="flex items-center gap-2 font-code text-xs text-slate-500">
+<span class="bg-emerald-50 text-emerald-700 border border-emerald-200/60 px-2 py-0.5 rounded font-medium">SYS // ACTIVE</span>
+</div>
+</div>
+<!-- Hero Section -->
+<div class="relative w-full px-4 pt-6 pb-6 bg-white border-b border-slate-200/80">
+<div class="relative z-10 flex flex-col gap-3">
+<div class="flex flex-wrap items-center gap-2">
+<span class="px-2.5 py-0.5 bg-orange-50 text-orange-700 border border-orange-200 font-code text-[11px] rounded font-semibold tracking-wide uppercase">PILLARS 01 — 05</span>
+<span class="font-code text-xs text-slate-500">STANDARDS: ASME / AWS / ISO 9001</span>
+</div>
+<h1 class="font-headline text-2xl sm:text-3xl font-bold text-slate-900 tracking-tight">
+            INDUSTRIAL <span class="text-orange-600">CAPABILITIES</span>
+</h1>
+<p class="font-body text-sm text-slate-600 leading-relaxed max-w-xl">
+            Precision engineering operations, turnkey multi-discipline heavy infrastructure, and calibrated asset management systems engineered for mission-critical reliability.
+          </p>
+<!-- Key Metrics Grid -->
+<div class="mt-2 grid grid-cols-3 gap-2 sm:gap-3">
+<div class="bg-slate-50 border border-slate-200/80 rounded-lg p-3 flex flex-col">
+<span class="font-code text-[11px] text-slate-500 tracking-wider">QUALIFIED WELD</span>
+<span class="font-headline text-xl sm:text-2xl font-bold text-slate-900 mt-0.5">99.8<span class="text-orange-600 text-sm font-semibold">%</span></span>
+<span class="font-code text-[10px] text-slate-500 mt-0.5">ASME IX PASS</span>
+</div>
+<div class="bg-slate-50 border border-slate-200/80 rounded-lg p-3 flex flex-col">
+<span class="font-code text-[11px] text-slate-500 tracking-wider">UPTIME INDEX</span>
+<span class="font-headline text-xl sm:text-2xl font-bold text-slate-900 mt-0.5">99.94<span class="text-orange-600 text-sm font-semibold">%</span></span>
+<span class="font-code text-[10px] text-slate-500 mt-0.5">PLANT ASSETS</span>
+</div>
+<div class="bg-slate-50 border border-slate-200/80 rounded-lg p-3 flex flex-col">
+<span class="font-code text-[11px] text-slate-500 tracking-wider">HSE RATING</span>
+<span class="font-headline text-xl sm:text-2xl font-bold text-emerald-600 mt-0.5">0.00</span>
+<span class="font-code text-[10px] text-slate-500 mt-0.5">LTIR BENCHMARK</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Interactive Pillar Selector Horizontal Strip -->
+<div class="sticky top-16 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200 px-4 py-2.5 overflow-x-auto flex items-center gap-2 shadow-sm">
+<button class="pillar-tab-btn h-9 px-3.5 flex items-center gap-1.5 font-code text-xs whitespace-nowrap rounded-md bg-orange-600 text-white font-semibold shadow-sm transition-all" id="pill-btn-0" onclick="switchPillar(0)">
+<span class="material-symbols-outlined text-[17px]">precision_manufacturing</span>
+<span>01. ENGINEERING</span>
+</button>
+<button class="pillar-tab-btn h-9 px-3.5 flex items-center gap-1.5 font-code text-xs whitespace-nowrap rounded-md bg-slate-100 text-slate-600 hover:text-slate-900 hover:bg-slate-200 transition-all font-medium" id="pill-btn-1" onclick="switchPillar(1)">
+<span class="material-symbols-outlined text-[17px]">foundation</span>
+<span>02. CONSTRUCTION</span>
+</button>
+<button class="pillar-tab-btn h-9 px-3.5 flex items-center gap-1.5 font-code text-xs whitespace-nowrap rounded-md bg-slate-100 text-slate-600 hover:text-slate-900 hover:bg-slate-200 transition-all font-medium" id="pill-btn-2" onclick="switchPillar(2)">
+<span class="material-symbols-outlined text-[17px]">build_circle</span>
+<span>03. MAINTENANCE</span>
+</button>
+<button class="pillar-tab-btn h-9 px-3.5 flex items-center gap-1.5 font-code text-xs whitespace-nowrap rounded-md bg-slate-100 text-slate-600 hover:text-slate-900 hover:bg-slate-200 transition-all font-medium" id="pill-btn-3" onclick="switchPillar(3)">
+<span class="material-symbols-outlined text-[17px]">local_shipping</span>
+<span>04. LOGISTICS</span>
+</button>
+<button class="pillar-tab-btn h-9 px-3.5 flex items-center gap-1.5 font-code text-xs whitespace-nowrap rounded-md bg-slate-100 text-slate-600 hover:text-slate-900 hover:bg-slate-200 transition-all font-medium" id="pill-btn-4" onclick="switchPillar(4)">
+<span class="material-symbols-outlined text-[17px]">groups</span>
+<span>05. MANPOWER</span>
+</button>
+</div>
+<!-- Dynamic Content Deck -->
+<div class="p-4 flex flex-col gap-4">
+<!-- PILLAR 01: ENGINEERING & TECHNICAL -->
+<section class="pillar-content-card flex flex-col gap-4" id="pillar-section-0">
+<div class="bg-white border border-slate-200/90 rounded-xl p-5 shadow-sm flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="font-code text-xs px-2 py-0.5 bg-orange-100 text-orange-800 rounded font-bold">SEC 01</span>
+<span class="font-code text-xs text-slate-500 uppercase tracking-wider font-semibold">DISCIPLINE // MECHANICAL</span>
+</div>
+<span class="font-code text-xs text-slate-400">DIM: 1,420mm OD</span>
+</div>
+<h2 class="font-headline text-xl font-bold text-slate-900 tracking-tight">ENGINEERING &amp; TECHNICAL</h2>
+<p class="font-body text-sm text-slate-600 leading-relaxed">High-tolerance pipeline welding, mechanical calibration, dynamic turbine installation, and certified NDT structural integrity evaluation.</p>
+<div class="flex flex-wrap gap-2 pt-1">
+<span class="px-2.5 py-1 bg-slate-100 text-slate-700 border border-slate-200 rounded font-code text-xs flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span> ASME SEC IX
+              </span>
+<span class="px-2.5 py-1 bg-slate-100 text-slate-700 border border-slate-200 rounded font-code text-xs flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span> AWS D1.1 CODE
+              </span>
+<span class="px-2.5 py-1 bg-slate-100 text-slate-700 border border-slate-200 rounded font-code text-xs flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-orange-500"></span> ASNT LEVEL II NDT
+              </span>
+</div>
+</div>
+<!-- Feature Image Card -->
+<div class="relative w-full h-48 rounded-xl overflow-hidden border border-slate-200 shadow-sm flex flex-col justify-end p-4">
+<img src="https://lh3.googleusercontent.com/aida/AEtjO1VzC_PXkb8ajQ8IvdNiWdiESCWiBfdQC7zftEcNskGS-F6XZUFiqY39VnRhNkIgnN-whfdvd4JTZios4QhPun3pnQ9Tfw66qHYvo5AwokEwqG-wUm2sZFP0CVMm5qS74DRsRioaqsPlz2lKDLXcIZMqFyIJSC3q3is1UJElEQ0YCcwZL1yVzIA2DZRweufhnD_dlGqBHjqMp4lnQCCFEuMX7gZtc2ghVcFht74THIlfV5exD8-p_aDW_g" alt="African mechanical pipe welders working on high-pressure oil and gas pipeline spools" class="absolute inset-0 w-full h-full object-cover">
+<div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/40 to-transparent"></div>
+<div class="relative z-10 flex items-center justify-between text-white">
+<div>
+<span class="font-code text-xs text-orange-400 font-semibold uppercase tracking-wider">FIELD CAPABILITY // 01</span>
+<p class="font-headline text-base font-bold text-white">High-Pressure Pipe Spool Fabrication</p>
+</div>
+<span class="px-2 py-1 bg-white/20 backdrop-blur-sm border border-white/30 rounded text-white font-code text-xs">SCH 80-160</span>
+</div>
+</div>
+<!-- Accordion Module Cluster -->
+<div class="flex flex-col gap-2.5">
+<details class="group bg-white border border-slate-200/90 rounded-xl overflow-hidden shadow-sm" open="">
+<summary class="min-h-[48px] p-4 cursor-pointer flex items-center justify-between list-none hover:bg-slate-50/80 transition-colors">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-lg bg-orange-50 text-orange-600 flex items-center justify-center border border-orange-100">
+<span class="material-symbols-outlined text-[18px]">hardware</span>
+</div>
+<span class="font-headline text-sm font-semibold text-slate-900">Welding &amp; Structural Steel Fabrication</span>
+</div>
+<span class="material-symbols-outlined text-slate-400 transition-transform duration-300 group-open:rotate-180">expand_more</span>
+</summary>
+<div class="px-4 pb-4 pt-1 flex flex-col gap-2.5 text-slate-600 font-body text-sm border-t border-slate-100">
+<p>ASME &amp; AWS standard fabrication for load-bearing skeletal infrastructure, offshore riser spools, pressure containment modules, and cryogenic fluid pipelines.</p>
+<div class="bg-slate-50 border border-slate-200/70 rounded-lg p-3 flex flex-col gap-1.5 font-code text-xs">
+<div class="flex justify-between text-slate-700">
+<span class="text-slate-500">TEST PROTOCOL</span>
+<span class="text-blue-600 font-semibold">X-RAY RADIOGRAPHY &amp; UT</span>
+</div>
+<div class="flex justify-between text-slate-700">
+<span class="text-slate-500">MAX THICKNESS RATING</span>
+<span class="text-orange-600 font-semibold">65 MM TITANIUM / STAINLESS ALLOY</span>
+</div>
+</div>
+</div>
+</details>
+<details class="group bg-white border border-slate-200/90 rounded-xl overflow-hidden shadow-sm">
+<summary class="min-h-[48px] p-4 cursor-pointer flex items-center justify-between list-none hover:bg-slate-50/80 transition-colors">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-lg bg-blue-50 text-blue-600 flex items-center justify-center border border-blue-100">
+<span class="material-symbols-outlined text-[18px]">cyclone</span>
+</div>
+<span class="font-headline text-sm font-semibold text-slate-900">Mechanical &amp; Industrial Installation</span>
+</div>
+<span class="material-symbols-outlined text-slate-400 transition-transform duration-300 group-open:rotate-180">expand_more</span>
+</summary>
+<div class="px-4 pb-4 pt-1 flex flex-col gap-2.5 text-slate-600 font-body text-sm border-t border-slate-100">
+<p>Erection and dynamic laser shaft alignment of multi-stage centrifugal pumps, heavy industrial compressors, thermal heat exchangers, and heavy gas turbines.</p>
+<div class="bg-slate-50 border border-slate-200/70 rounded-lg p-2.5 flex justify-between font-code text-xs">
+<span class="text-slate-500">ALIGNMENT TOLERANCE</span>
+<span class="text-blue-600 font-semibold">±0.02 MM LASER RETICLE</span>
+</div>
+</div>
+</details>
+<details class="group bg-white border border-slate-200/90 rounded-xl overflow-hidden shadow-sm">
+<summary class="min-h-[48px] p-4 cursor-pointer flex items-center justify-between list-none hover:bg-slate-50/80 transition-colors">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-lg bg-slate-100 text-slate-700 flex items-center justify-center border border-slate-200">
+<span class="material-symbols-outlined text-[18px]">biotech</span>
+</div>
+<span class="font-headline text-sm font-semibold text-slate-900">Engineering &amp; Technical Support (NDT)</span>
+</div>
+<span class="material-symbols-outlined text-slate-400 transition-transform duration-300 group-open:rotate-180">expand_more</span>
+</summary>
+<div class="px-4 pb-4 pt-1 flex flex-col gap-2 text-slate-600 font-body text-sm border-t border-slate-100">
+<p>Non-Destructive Testing (NDT: UT, MPI, DPI, Eddy Current), structural CAD finite element analysis, stress relief thermal cycle logging, and asset engineering sign-off.</p>
+</div>
+</details>
+</div>
+<!-- Action Card -->
+<div class="bg-white border border-slate-200 rounded-xl p-4 flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3 shadow-sm">
+<div class="flex flex-col">
+<span class="font-code text-xs text-slate-500 uppercase">STATUS: FIELD MOBILIZATION READY</span>
+<span class="font-headline text-sm font-bold text-slate-900">Initiate Engineering Deployment</span>
+</div>
+<div class="flex items-center gap-2">
+<button class="h-10 flex-1 sm:flex-initial px-3.5 bg-slate-100 text-slate-700 border border-slate-200 rounded-lg font-code text-xs uppercase hover:bg-slate-200 transition-colors font-medium" onclick="requestSpec('Engineering &amp; Technical')">
+                SPEC SHEET
+              </button>
+<button class="h-10 flex-1 sm:flex-initial px-4 bg-orange-600 text-white rounded-lg font-code text-xs uppercase hover:bg-orange-700 transition-colors font-semibold shadow-sm" onclick="deployService('Engineering &amp; Technical')">
+                DEPLOY SERVICE
+              </button>
+</div>
+</div>
+</section>
+<!-- PILLAR 02: CONSTRUCTION -->
+<section class="pillar-content-card hidden flex flex-col gap-4" id="pillar-section-1">
+<div class="bg-white border border-slate-200/90 rounded-xl p-5 shadow-sm flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="font-code text-xs px-2 py-0.5 bg-orange-100 text-orange-800 rounded font-bold">SEC 02</span>
+<span class="font-code text-xs text-slate-500 uppercase tracking-wider font-semibold">DISCIPLINE // CIVIL &amp; INFRA</span>
+</div>
+<span class="font-code text-xs text-slate-400">SURVEY: REAL-TIME GNSS</span>
+</div>
+<h2 class="font-headline text-xl font-bold text-slate-900 tracking-tight">CONSTRUCTION</h2>
+<p class="font-body text-sm text-slate-600 leading-relaxed">Civil infrastructure, heavy reinforced industrial flooring, containment dykes, and turnkey EPC contract execution.</p>
+<div class="flex flex-wrap gap-2 pt-1">
+<span class="px-2.5 py-1 bg-slate-100 text-slate-700 border border-slate-200 rounded font-code text-xs">FIDIC EPC/TURNKEY</span>
+<span class="px-2.5 py-1 bg-slate-100 text-slate-700 border border-slate-200 rounded font-code text-xs">HEAVY SLAB &gt; 45MPA</span>
+<span class="px-2.5 py-1 bg-blue-50 text-blue-700 border border-blue-200 rounded font-code text-xs font-semibold">BIM LEVEL 2</span>
+</div>
+</div>
+<div class="relative w-full h-48 rounded-xl overflow-hidden border border-slate-200 shadow-sm flex flex-col justify-end p-4">
+<div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCDwAH7HWllUMX42IQlkyRxZc1ZfLXrasqVTiDu_u5cpyjE0HPa5FrEgklgEgfb1kHcmn6r21C0UyZmXCdj-bhyvaVBcKIy3pKY0uHtAKGT2s5XyzJMMJkvp4QVqLpBuQufk3NincfImaVXh4Cf_8KMYFH2nL9SDI78TJRQeZbbH3PltZnjbw2t1dkKGyZaK3ahKWlkx0eI3IBZdtT1NO0fC3_c43WqFShbnD6D6--V0fcMeVEAR5Q')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/40 to-transparent"></div>
+<div class="relative z-10 flex items-center justify-between text-white">
+<div>
+<span class="font-code text-xs text-orange-400 uppercase font-semibold">EPC DIVISION // 02</span>
+<p class="font-headline text-base font-bold">Industrial Plant Erection &amp; Foundations</p>
+</div>
+<span class="px-2 py-1 bg-white/20 backdrop-blur-sm border border-white/30 rounded text-white font-code text-xs">CIVIL SPEC</span>
+</div>
+</div>
+<div class="grid grid-cols-1 gap-2.5">
+<div class="bg-white border border-slate-200 rounded-xl p-4 flex flex-col gap-1.5 shadow-sm">
+<div class="flex items-center gap-2 text-slate-900">
+<span class="material-symbols-outlined text-orange-600 text-[20px]">apartment</span>
+<span class="font-headline text-sm font-semibold">Building &amp; Heavy Civil Works</span>
+</div>
+<p class="font-body text-sm text-slate-600">Substructure foundations, vibration-isolated turbine pads, explosion-resistant control rooms, and drainage retention systems.</p>
+</div>
+<div class="bg-white border border-slate-200 rounded-xl p-4 flex flex-col gap-1.5 shadow-sm">
+<div class="flex items-center gap-2 text-slate-900">
+<span class="material-symbols-outlined text-blue-600 text-[20px]">handshake</span>
+<span class="font-headline text-sm font-semibold">General Contracts &amp; Turnkey Execution</span>
+</div>
+<p class="font-body text-sm text-slate-600">Complete end-to-end management covering procurement, architectural drafting, structural verification, commissioning, and final asset handoff.</p>
+</div>
+</div>
+<div class="bg-white border border-slate-200 rounded-xl p-4 flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3 shadow-sm">
+<div class="flex flex-col">
+<span class="font-code text-xs text-slate-500 uppercase">DELIVERY MODEL: DESIGN &amp; BUILD</span>
+<span class="font-headline text-sm font-bold text-slate-900">Mobilize Civil Division</span>
+</div>
+<div class="flex items-center gap-2">
+<button class="h-10 flex-1 sm:flex-initial px-3.5 bg-slate-100 text-slate-700 border border-slate-200 rounded-lg font-code text-xs uppercase hover:bg-slate-200 transition-colors font-medium" onclick="requestSpec('Construction EPC')">
+                CIVIL DOSSIER
+              </button>
+<button class="h-10 flex-1 sm:flex-initial px-4 bg-orange-600 text-white rounded-lg font-code text-xs uppercase hover:bg-orange-700 transition-colors font-semibold shadow-sm" onclick="deployService('Construction EPC')">
+                COMMISSION EPC
+              </button>
+</div>
+</div>
+</section>
+<!-- PILLAR 03: MAINTENANCE -->
+<section class="pillar-content-card hidden flex flex-col gap-4" id="pillar-section-2">
+<div class="bg-white border border-slate-200/90 rounded-xl p-5 shadow-sm flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="font-code text-xs px-2 py-0.5 bg-orange-100 text-orange-800 rounded font-bold">SEC 03</span>
+<span class="font-code text-xs text-slate-500 uppercase tracking-wider font-semibold">DISCIPLINE // ASSET RELIABILITY</span>
+</div>
+<span class="font-code text-xs text-slate-400">MTBF TARGET: 8,760 HRS</span>
+</div>
+<h2 class="font-headline text-xl font-bold text-slate-900 tracking-tight">MAINTENANCE</h2>
+<p class="font-body text-sm text-slate-600 leading-relaxed">Continuous predictive diagnostics, scheduled turnaround shutdowns, and holistic facility operation management.</p>
+<div class="flex flex-wrap gap-2 pt-1">
+<span class="px-2.5 py-1 bg-slate-100 text-slate-700 border border-slate-200 rounded font-code text-xs">RCM-II COMPLIANT</span>
+<span class="px-2.5 py-1 bg-slate-100 text-slate-700 border border-slate-200 rounded font-code text-xs">VIBRATION SPECTRUM</span>
+<span class="px-2.5 py-1 bg-emerald-50 text-emerald-700 border border-emerald-200 rounded font-code text-xs font-semibold">RAPID SQUAD 24/7</span>
+</div>
+</div>
+<!-- Diagnostics Telemetry Graph -->
+<div class="bg-white border border-slate-200 rounded-xl p-4 flex flex-col gap-2 shadow-sm">
+<div class="flex items-center justify-between font-code text-xs">
+<span class="text-slate-500 font-medium">DIAGNOSTIC TELEMETRY</span>
+<span class="text-blue-600 font-semibold">SYSTEM: VIB_SENSOR_04</span>
+</div>
+<svg class="w-full h-16" preserveAspectRatio="none" viewBox="0 0 320 80">
+<path d="M0,40 Q20,10 40,40 T80,40 T120,70 T160,20 T200,40 T240,30 T280,50 T320,40" fill="none" stroke="#2563eb" stroke-width="2"></path>
+<path d="M0,40 Q20,10 40,40 T80,40 T120,70 T160,20 T200,40 T240,30 T280,50 T320,40 L320,80 L0,80 Z" fill="rgba(37, 99, 235, 0.05)"></path>
+<line stroke="#ea580c" stroke-dasharray="2,2" stroke-width="1.5" x1="160" x2="160" y1="0" y2="80"></line>
+<circle cx="160" cy="20" fill="#ea580c" r="4"></circle>
+</svg>
+<div class="flex justify-between font-code text-[11px]">
+<span class="text-slate-500">PEAK HARMONIC: NORMAL</span>
+<span class="text-emerald-600 font-semibold">ZERO CAVITATION DETECTED</span>
+</div>
+</div>
+<div class="grid grid-cols-1 gap-2.5">
+<div class="bg-white border border-slate-200 rounded-xl p-4 flex flex-col gap-1.5 shadow-sm">
+<span class="font-headline text-sm font-semibold text-slate-900">Preventive &amp; Corrective Industrial Maintenance</span>
+<p class="font-body text-sm text-slate-600">Lube oil analysis, thermal imaging inspections, dynamic balancing of rotators, and unscheduled emergency failure recovery.</p>
+</div>
+<div class="bg-white border border-slate-200 rounded-xl p-4 flex flex-col gap-1.5 shadow-sm">
+<span class="font-headline text-sm font-semibold text-slate-900">Comprehensive Facility Management</span>
+<p class="font-body text-sm text-slate-600">HVAC systems, electrical switchgear maintenance, structural integrity surveys, and environmental containment maintenance.</p>
+</div>
+</div>
+<div class="bg-white border border-slate-200 rounded-xl p-4 flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3 shadow-sm">
+<div class="flex flex-col">
+<span class="font-code text-xs text-slate-500 uppercase">RESPONSE SLA: &lt; 2 HOURS</span>
+<span class="font-headline text-sm font-bold text-slate-900">Deploy Maintenance Crew</span>
+</div>
+<button class="h-10 px-5 bg-orange-600 text-white rounded-lg font-code text-xs uppercase hover:bg-orange-700 transition-colors font-semibold shadow-sm" onclick="deployService('Industrial Maintenance')">
+              ENGAGE RELIABILITY CONTRACT
+            </button>
+</div>
+</section>
+<!-- PILLAR 04: SUPPLY CHAIN & LOGISTICS -->
+<section class="pillar-content-card hidden flex flex-col gap-4" id="pillar-section-3">
+<div class="bg-white border border-slate-200/90 rounded-xl p-5 shadow-sm flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="font-code text-xs px-2 py-0.5 bg-orange-100 text-orange-800 rounded font-bold">SEC 04</span>
+<span class="font-code text-xs text-slate-500 uppercase tracking-wider font-semibold">DISCIPLINE // SUPPLY &amp; FLEET</span>
+</div>
+<span class="font-code text-xs text-slate-400">FLEET: 100% TELEMETRY</span>
+</div>
+<h2 class="font-headline text-xl font-bold text-slate-900 tracking-tight">SUPPLY CHAIN &amp; LOGISTICS</h2>
+<p class="font-body text-sm text-slate-600 leading-relaxed">Critical equipment procurement, API/DIN-certified valves and fittings supply, out-of-gauge heavy transport, and priority dispatch fleet.</p>
+<div class="flex flex-wrap gap-2 pt-1">
+<span class="px-2.5 py-1 bg-slate-100 text-slate-700 border border-slate-200 rounded font-code text-xs">OEM TRACEABILITY</span>
+<span class="px-2.5 py-1 bg-slate-100 text-slate-700 border border-slate-200 rounded font-code text-xs">HEAVY HAULAGE &gt; 120T</span>
+<span class="px-2.5 py-1 bg-blue-50 text-blue-700 border border-blue-200 rounded font-code text-xs font-semibold">GPS SATELLITE TRACK</span>
+</div>
+</div>
+<div class="relative w-full h-48 rounded-xl overflow-hidden border border-slate-200 shadow-sm flex flex-col justify-end p-4">
+<div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuARLvMVfRdYvy2Bksm-ID6wmfQyUmJKHVJvvXxcnU26xLxGV6KdCWZV7Kc6Iz7IjNDxgnbsI2lMXnnpvgeWrCGroysM5r2W5zHT-Y44DUMCmaqmYd3Vn7xP2y9VqvbNEcnFGuD7SRV94jFt406pVJLJN224kFbMFQupQwifHCMQOgEx9mJ9mUFDLxwxAo2OOTxzbx1U5gZTc3Mq5hVjj-cmBAlaGVGPn0inKq6m5C-5wvF9Qtd7er8')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/40 to-transparent"></div>
+<div class="relative z-10 flex items-center justify-between text-white">
+<div>
+<span class="font-code text-xs text-orange-400 uppercase font-semibold">HAULAGE FLEET // 04</span>
+<p class="font-headline text-base font-bold">Out-of-Gauge Material Transit</p>
+</div>
+<span class="px-2 py-1 bg-white/20 backdrop-blur-sm border border-white/30 rounded text-white font-code text-xs">CLASS 1 HEAVY</span>
+</div>
+</div>
+<div class="grid grid-cols-1 gap-2.5">
+<div class="bg-white border border-slate-200 rounded-xl p-4 flex flex-col gap-1.5 shadow-sm">
+<div class="flex items-center gap-2 text-slate-900">
+<span class="material-symbols-outlined text-orange-600 text-[20px]">inventory_2</span>
+<span class="font-headline text-sm font-semibold">Procurement &amp; Technical Equipment Supply</span>
+</div>
+<p class="font-body text-sm text-slate-600">Global sourcing of API-spec casing, valves, high-pressure flanges, electrical switchgears, and specialized consumable stocks.</p>
+</div>
+<div class="bg-white border border-slate-200 rounded-xl p-4 flex flex-col gap-1.5 shadow-sm">
+<div class="flex items-center gap-2 text-slate-900">
+<span class="material-symbols-outlined text-blue-600 text-[20px]">local_shipping</span>
+<span class="font-headline text-sm font-semibold">Logistics &amp; Heavy Material Handling</span>
+</div>
+<p class="font-body text-sm text-slate-600">Multi-axle hydraulic modular trailers, crane rigging solutions, and escort logistics for superload heavy equipment.</p>
+</div>
+<div class="bg-white border border-slate-200 rounded-xl p-4 flex flex-col gap-1.5 shadow-sm">
+<div class="flex items-center gap-2 text-slate-900">
+<span class="material-symbols-outlined text-emerald-600 text-[20px]">rocket_launch</span>
+<span class="font-headline text-sm font-semibold">Dispatch &amp; Express Delivery Fleet</span>
+</div>
+<p class="font-body text-sm text-slate-600">Time-critical parts mobilization directly to onshore locations and offshore staging terminals with 24/7 live telemetry tracking.</p>
+</div>
+</div>
+<div class="bg-white border border-slate-200 rounded-xl p-4 flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3 shadow-sm">
+<div class="flex flex-col">
+<span class="font-code text-xs text-slate-500 uppercase">EXPEDITED SUPPLY LINE</span>
+<span class="font-headline text-sm font-bold text-slate-900">Request Bill of Materials Quote</span>
+</div>
+<button class="h-10 px-5 bg-orange-600 text-white rounded-lg font-code text-xs uppercase hover:bg-orange-700 transition-colors font-semibold shadow-sm" onclick="deployService('Supply Chain &amp; Logistics')">
+              REQUEST PROCUREMENT SPEC
+            </button>
+</div>
+</section>
+<!-- PILLAR 05: SUPPORT SERVICES -->
+<section class="pillar-content-card hidden flex flex-col gap-4" id="pillar-section-4">
+<div class="bg-white border border-slate-200/90 rounded-xl p-5 shadow-sm flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="font-code text-xs px-2 py-0.5 bg-orange-100 text-orange-800 rounded font-bold">SEC 05</span>
+<span class="font-code text-xs text-slate-500 uppercase tracking-wider font-semibold">DISCIPLINE // HUMAN CAPITAL &amp; HSE</span>
+</div>
+<span class="font-code text-xs text-slate-400">VERIFICATION: 100% BIOMETRIC</span>
+</div>
+<h2 class="font-headline text-xl font-bold text-slate-900 tracking-tight">SUPPORT SERVICES</h2>
+<p class="font-body text-sm text-slate-600 leading-relaxed">Certified technical manpower leasing, high-risk industrial safety personnel, and hazardous facility sanitization protocols.</p>
+<div class="flex flex-wrap gap-2 pt-1">
+<span class="px-2.5 py-1 bg-slate-100 text-slate-700 border border-slate-200 rounded font-code text-xs">OPITO / BOSIET</span>
+<span class="px-2.5 py-1 bg-blue-50 text-blue-700 border border-blue-200 rounded font-code text-xs font-semibold">NEBOSH CERTIFIED</span>
+<span class="px-2.5 py-1 bg-slate-100 text-slate-700 border border-slate-200 rounded font-code text-xs">CONFINED SPACE CLASS C</span>
+</div>
+</div>
+<div class="grid grid-cols-1 gap-2.5">
+<div class="bg-white border border-slate-200 rounded-xl p-4 flex flex-col gap-3 shadow-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2 text-slate-900">
+<span class="material-symbols-outlined text-orange-600 text-[20px]">badge</span>
+<span class="font-headline text-sm font-semibold">Certified Manpower Outsourcing</span>
+</div>
+<span class="font-code text-xs bg-emerald-50 text-emerald-700 border border-emerald-200 px-2 py-0.5 rounded font-semibold">READY CREW</span>
+</div>
+<p class="font-body text-sm text-slate-600">Deployment of 6G coded welders, precision pipe fitters, master riggers, NDT level II tech officers, and on-site HSE compliance managers.</p>
+<div class="grid grid-cols-2 gap-2 font-code text-xs">
+<div class="p-2 bg-slate-50 border border-slate-200/80 rounded flex items-center gap-1.5 text-slate-700">
+<span class="material-symbols-outlined text-[16px] text-emerald-600">check_circle</span> 6G CODED WELDERS
+                </div>
+<div class="p-2 bg-slate-50 border border-slate-200/80 rounded flex items-center gap-1.5 text-slate-700">
+<span class="material-symbols-outlined text-[16px] text-emerald-600">check_circle</span> HEAVY RIGGERS
+                </div>
+<div class="p-2 bg-slate-50 border border-slate-200/80 rounded flex items-center gap-1.5 text-slate-700">
+<span class="material-symbols-outlined text-[16px] text-emerald-600">check_circle</span> HSE AUDITORS
+                </div>
+<div class="p-2 bg-slate-50 border border-slate-200/80 rounded flex items-center gap-1.5 text-slate-700">
+<span class="material-symbols-outlined text-[16px] text-emerald-600">check_circle</span> QA/QC ENGINEERS
+                </div>
+</div>
+</div>
+<div class="bg-white border border-slate-200 rounded-xl p-4 flex flex-col gap-1.5 shadow-sm">
+<div class="flex items-center gap-2 text-slate-900">
+<span class="material-symbols-outlined text-blue-600 text-[20px]">cleaning_services</span>
+<span class="font-headline text-sm font-semibold">Industrial &amp; Commercial Cleaning</span>
+</div>
+<p class="font-body text-sm text-slate-600">Hydro-blasting, chemical storage vessel de-sludging, toxic scale removal, offshore topside degreasing, and ISO 14001 eco-compliant disposal.</p>
+</div>
+</div>
+<div class="bg-white border border-slate-200 rounded-xl p-4 flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3 shadow-sm">
+<div class="flex flex-col">
+<span class="font-code text-xs text-slate-500 uppercase">CAPACITY: 500+ VERIFIED PERSONNEL</span>
+<span class="font-headline text-sm font-bold text-slate-900">Outsource Industrial Staff</span>
+</div>
+<button class="h-10 px-5 bg-orange-600 text-white rounded-lg font-code text-xs uppercase hover:bg-orange-700 transition-colors font-semibold shadow-sm" onclick="deployService('Certified Manpower Outsourcing')">
+              REQUISITION MANPOWER
+            </button>
+</div>
+</section>
+<!-- Rapid Dispatch Callout Console -->
+<div class="bg-gradient-to-br from-slate-900 to-slate-800 text-white rounded-xl p-5 flex flex-col gap-3 shadow-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-orange-500 animate-ping"></span>
+<span class="font-code text-xs font-bold text-slate-100 tracking-wider uppercase">J&amp;O CENTRAL DISPATCH HOTLINE</span>
+</div>
+<span class="font-code text-[11px] text-slate-400">PORT HARCOURT // LAGOS</span>
+</div>
+<p class="font-body text-sm text-slate-300 leading-relaxed">
+            Require emergency pipeline shut-in response or heavy rigging mobilization? Our 24/7 technical operations desk routes teams within 120 minutes across operational corridors.
+          </p>
+<div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-2 pt-1">
+<a class="h-11 px-5 bg-orange-600 hover:bg-orange-500 text-white font-code text-xs uppercase flex items-center justify-center gap-2 rounded-lg transition-colors font-bold shadow" href="tel:08062887287">
+<span class="material-symbols-outlined text-[18px]">call</span>
+              DIAL COMMAND: 08062887287
+            </a>
+<button class="h-11 px-4 bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 rounded-lg font-code text-xs uppercase flex items-center justify-center gap-2 transition-colors font-medium" onclick="openCADInspector()">
+<span class="material-symbols-outlined text-[18px] text-blue-400">grid_view</span>
+              VIEW CAD SCHEMATICS
+            </button>
+</div>
+</div>
+</div>
+<!-- Interactive Feedback Toast Banner -->
+<div class="fixed bottom-20 left-4 right-4 z-50 transform translate-y-32 transition-transform duration-300 pointer-events-none" id="action-toast">
+<div class="max-w-md mx-auto bg-slate-900 text-white px-4 py-3 rounded-lg shadow-xl flex items-center justify-between border border-slate-800">
+<div class="flex items-center gap-2 min-w-0">
+<span class="material-symbols-outlined text-orange-500 text-[18px]">check_circle</span>
+<span class="font-code text-xs truncate" id="toast-message">COMMAND DISPATCHED</span>
+</div>
+<span class="font-code text-[11px] text-slate-400 uppercase font-semibold">SYS_OK</span>
+</div>
+</div>
+</div>
+</main>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 w-full z-50 pb-safe bg-white/95 backdrop-blur-md border-t border-slate-200 shadow-[0_-2px_10px_rgba(0,0,0,0.03)]">
+<div class="h-16 px-4 flex items-center justify-around max-w-lg mx-auto">
+<a class="min-h-[44px] min-w-[44px] flex flex-col items-center justify-center gap-1 text-slate-500 hover:text-slate-900 transition-colors" data-path="overview" href="#">
+<span class="material-symbols-outlined text-[20px]">dashboard</span>
+<span class="font-code text-[10px] tracking-wider uppercase font-medium">Overview</span>
+</a>
+<a aria-current="page" class="min-h-[44px] min-w-[44px] flex flex-col items-center justify-center gap-1 text-orange-600 font-semibold" data-path="services" href="#">
+<span class="material-symbols-outlined text-[20px]">precision_manufacturing</span>
+<span class="font-code text-[10px] tracking-wider uppercase">Services</span>
+</a>
+<a class="min-h-[44px] min-w-[44px] flex flex-col items-center justify-center gap-1 text-slate-500 hover:text-slate-900 transition-colors" data-path="sectors" href="#">
+<span class="material-symbols-outlined text-[20px]">oil_barrel</span>
+<span class="font-code text-[10px] tracking-wider uppercase font-medium">Sectors</span>
+</a>
+<a class="min-h-[44px] min-w-[44px] flex flex-col items-center justify-center gap-1 text-slate-500 hover:text-slate-900 transition-colors" data-path="corporate" href="#">
+<span class="material-symbols-outlined text-[20px]">corporate_fare</span>
+<span class="font-code text-[10px] tracking-wider uppercase font-medium">Corporate</span>
+</a>
+</div>
+</nav>
+<script>
+    function switchPillar(index) {
+      for (let i = 0; i < 5; i++) {
+        const section = document.getElementById(`pillar-section-${i}`);
+        const btn = document.getElementById(`pill-btn-${i}`);
+        if (section && btn) {
+          if (i === index) {
+            section.classList.remove('hidden');
+            btn.classList.remove('bg-slate-100', 'text-slate-600', 'font-medium');
+            btn.classList.add('bg-orange-600', 'text-white', 'font-semibold');
+          } else {
+            section.classList.add('hidden');
+            btn.classList.add('bg-slate-100', 'text-slate-600', 'font-medium');
+            btn.classList.remove('bg-orange-600', 'text-white', 'font-semibold');
+          }
+        }
+      }
+    }
+
+    function showToast(text) {
+      const toast = document.getElementById('action-toast');
+      const msg = document.getElementById('toast-message');
+      if (toast && msg) {
+        msg.textContent = text;
+        toast.classList.remove('translate-y-32');
+        setTimeout(() => {
+          toast.classList.add('translate-y-32');
+        }, 3500);
+      }
+    }
+
+    function deployService(pillarName) {
+      showToast(`REQUISITION INITIALIZED: ${pillarName.toUpperCase()}`);
+    }
+
+    function requestSpec(specName) {
+      showToast(`DOSSIER DOWNLOAD QUEUED: ${specName.toUpperCase()}`);
+    }
+
+    function openCADInspector() {
+      showToast("OPENING CAD 3D PIPELINE SCHEMATICS MODULE...");
+    }
+  </script>
+
+
+</body></html>

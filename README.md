@@ -1,97 +1,73 @@
-# React + TypeScript + Vite + React Router Starter
+# J&O Technical Services Limited — Corporate Website
 
-A modern, fast, and scalable starter template built with **React 19**, **TypeScript**, **Vite**, and **React Router v7**, styled with a sleek custom design system.
+A modern, high-performance corporate web platform for **J&O Technical Services Limited** (RC: 9665822), an indigenous Nigerian oilfield engineering, pipeline fabrication, structural construction, and asset integrity contractor headquartered in Port Harcourt, Rivers State, Nigeria.
 
----
-
-## 🚀 Features
-
-- ⚡ **Lightning-Fast Tooling**: Powered by [Vite](https://vitejs.dev/) with instant Hot Module Replacement (HMR).
-- 🛡️ **Type Safety**: Full TypeScript 5+ integration with strict type checking and zero configuration needed.
-- 🧭 **Declarative Routing**: Client-side routing with [React Router v7](https://reactrouter.com/), featuring nested routes, layouts, active link states, and custom 404 handling.
-- 🎨 **Modern Design System**: Sleek dark-mode aesthetic, CSS design tokens, smooth glassmorphism, responsive container grids, and Google Fonts (`Plus Jakarta Sans` & `JetBrains Mono`).
-- 💎 **Iconography**: Beautiful icons via [Lucide React](https://lucide.dev/).
-- 📦 **Clean Architecture**: Organized structure with separated components, pages, routes, and styles.
+Built with **React 19**, **TypeScript**, **Vite**, **Tailwind CSS**, and **React Router v7**, faithfully implementing the Google Stitch design specifications and asset pipeline.
 
 ---
 
-## 📁 Project Structure
+## 🏛️ Corporate Identity & Profile
 
-```text
-offiong-website/
-├── public/                 # Static public assets (favicons, icons)
-│   └── favicon.svg
-├── src/
-│   ├── assets/             # Project media & static files
-│   ├── components/         # Reusable UI components
-│   │   ├── Navbar.tsx      # Navigation header with active indicators
-│   │   ├── Footer.tsx      # Footer with stack badges & copyright
-│   │   └── Layout.tsx      # Core page wrapper with <Outlet />
-│   ├── pages/              # Route view components
-│   │   ├── HomePage.tsx    # Hero section, interactive counter & feature cards
-│   │   ├── FeaturesPage.tsx# Deep dive tabs & code architectural examples
-│   │   ├── AboutPage.tsx   # Project details and script references
-│   │   └── NotFoundPage.tsx# 404 error page fallback
-│   ├── router/             # React Router routing configuration
-│   │   └── index.tsx       # createBrowserRouter route definitions
-│   ├── App.tsx             # Root component with RouterProvider
-│   ├── index.css           # Global design system, theme variables & tokens
-│   └── main.tsx            # React application mounting point
-├── index.html              # HTML entry point with Google Fonts
-├── package.json            # Dependencies and npm script targets
-├── tsconfig.json           # Root TypeScript configuration
-├── tsconfig.app.json       # Frontend application TypeScript settings
-├── tsconfig.node.json      # Node/Vite build TypeScript settings
-└── vite.config.ts          # Vite build tool configuration
-```
+- **Company Name**: J&O TECHNICAL SERVICES LIMITED
+- **Registration**: RC: 9665822
+- **Motto / Slogan**: *"Delivering Technical Excellence, Safely and On Time"*
+- **Head Office**: 3 Wopara Street, Off Eneka Road, Port Harcourt, Rivers State, Nigeria
+- **Direct Phone Hotline**: `08062887287`
+- **Tender / RFQ Email**: `jotechnicalsourceslimited@gmail.com`
+- **Regulatory Accreditations**: NCDMB (NOGICD Compliant) • NUPRC / DPR Certified • ISO 9001:2015 Aligned
+
+---
+
+## 🚀 Key Website Features & Pages
+
+| Route | Page | Key Highlights |
+| :--- | :--- | :--- |
+| `/` | **Home** | Editorial offshore hero, 450,000+ safe man-hours metrics, corporate overview, 5 key service pillars, strategic sectors, and RFQ callout |
+| `/about` | **About Corporate** | Institutional history (RC: 9665822), Vision & Mission, S.Q.I.C.E core values framework, 5 corporate objectives, Port Harcourt base |
+| `/services` | **Services & Capabilities** | Interactive capability tabs covering Welding & High-Pressure Fabrication (ASME IX, API 1104), Mechanical Installation, Civil Construction, Procurement Logistics, and Technical Manpower Outsourcing |
+| `/hse` | **HSE & Quality** | Zero-Harm safety culture, Job Safety Analysis (JSA), Stop Work Authority (SWA), ISO 9001:2015 QA/QC framework, and Niger Delta community relations |
+| `/contact` | **Contact & Tender Desk** | Interactive RFQ and tender submission form, head office coordinates, working hours, and tender FAQ accordion |
+| `*` | **404 Error Page** | Elegant fallback route with return navigation |
+
+---
+
+## 🧰 Tech Stack
+
+- **Framework**: [React 19](https://react.dev/)
+- **Language**: [TypeScript 5+](https://www.typescriptlang.org/)
+- **Bundler**: [Vite 6](https://vitejs.dev/) with `@tailwindcss/vite`
+- **Styling**: [Tailwind CSS v4](https://tailwindcss.com/) with custom corporate theme tokens
+- **Routing**: [React Router v7](https://reactrouter.com/)
+- **Icons**: [Lucide React](https://lucide.dev/) & [Google Material Symbols](https://fonts.google.com/icons)
+- **Typography**: Google Fonts (*Space Grotesk* for display/headlines & *Inter* for body text)
 
 ---
 
 ## 🛠️ Getting Started
 
-### Prerequisites
-
-Make sure you have **Node.js 18+** installed on your system.
-
 ### 1. Installation
-
-Clone or open the project directory and install dependencies:
 
 ```bash
 npm install
 ```
 
-### 2. Development Server
-
-Start the local development server with hot reload:
+### 2. Run Development Server
 
 ```bash
 npm run dev
 ```
 
-The application will be available at `http://localhost:5173/`.
+Open `http://localhost:5173/` in your browser.
 
 ### 3. Production Build
-
-Compile TypeScript and build optimized production assets:
 
 ```bash
 npm run build
 ```
 
-The output bundle will be generated in the `dist/` directory.
+Generates optimized, production-ready assets in `dist/`.
 
-### 4. Preview Production Build
-
-Locally preview the generated production build:
-
-```bash
-npm run preview
-```
-
-### 5. Linting
-
-Run code linting:
+### 4. Run Linter
 
 ```bash
 npm run lint
@@ -99,36 +75,48 @@ npm run lint
 
 ---
 
-## 🧭 Routing Architecture
+## 📁 Directory Structure
 
-Routing is configured in [`src/router/index.tsx`](src/router/index.tsx) using `createBrowserRouter`:
-
-| Route | Page Component | Description |
-| :--- | :--- | :--- |
-| `/` | `HomePage` | Hero section, interactive React state demo, feature highlights |
-| `/features` | `FeaturesPage` | Interactive tabs showcasing Router, TypeScript & Styling features |
-| `/about` | `AboutPage` | Directory structure breakdown, script cheat sheet |
-| `*` | `NotFoundPage` | 404 fallback with return-to-home navigation |
-
-To add a new route:
-1. Create a page component in `src/pages/YourPage.tsx`.
-2. Import it into `src/router/index.tsx`.
-3. Add the route object inside the `children` array under `src/router/index.tsx`.
-4. (Optional) Add a `<NavLink>` in `src/components/Navbar.tsx`.
-
----
-
-## 🧰 Tech Stack
-
-- **Framework**: [React 19](https://react.dev/)
-- **Language**: [TypeScript](https://www.typescriptlang.org/)
-- **Bundler**: [Vite 6](https://vitejs.dev/)
-- **Routing**: [React Router v7](https://reactrouter.com/)
-- **Icons**: [Lucide React](https://lucide.dev/)
-- **Linter**: [Oxlint](https://oxc.rs/)
+```text
+offiong-website/
+├── public/
+│   └── assets/
+│       └── images/               # Corporate imagery & vector logo
+│           ├── company_logo.png
+│           ├── hero_offshore.png
+│           ├── pipe_welders.png
+│           ├── hse_safety.png
+│           ├── boardroom_governance.png
+│           ├── terminal_aerial.png
+│           ├── supply_yard.png
+│           ├── materials_testing.png
+│           ├── procurement_logistics.png
+│           └── facility_installation.png
+├── src/
+│   ├── components/
+│   │   ├── Navbar.tsx            # Sticky corporate header & status bar
+│   │   ├── Footer.tsx            # Full corporate footer & contact data
+│   │   └── Layout.tsx            # Application wrapper with <Outlet />
+│   ├── pages/
+│   │   ├── HomePage.tsx          # Homepage with metrics & 5 pillars
+│   │   ├── AboutPage.tsx         # Corporate history, SQICE values & governance
+│   │   ├── ServicesPage.tsx      # Filterable technical service capabilities
+│   │   ├── HSEPage.tsx           # Safety policies & ISO quality assurance
+│   │   ├── ContactPage.tsx       # RFQ form & Tender mobilization desk
+│   │   └── NotFoundPage.tsx      # 404 handler
+│   ├── router/
+│   │   └── index.tsx             # React Router configuration
+│   ├── App.tsx                   # Root router provider
+│   ├── index.css                 # Tailwind CSS v4 setup & theme variables
+│   └── main.tsx                  # React DOM entry point
+├── index.html                    # HTML shell with Google Fonts
+├── package.json                  # Dependencies & npm scripts
+├── tsconfig.app.json             # App TypeScript config
+└── vite.config.ts                # Vite config with React & Tailwind plugins
+```
 
 ---
 
 ## 📄 License
 
-This project is open-source and available under the [MIT License](LICENSE).
+&copy; J&O Technical Services Limited. RC: 9665822. All rights reserved.
