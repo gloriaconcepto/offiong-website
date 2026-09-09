@@ -8,6 +8,7 @@ import {
   Users, 
   ArrowRight
 } from 'lucide-react';
+import { getAssetUrl } from '../utils/assets.ts';
 
 export const ServicesPage: React.FC = () => {
   const [activeTab, setActiveTab] = useState<'all' | 'engineering' | 'construction' | 'maintenance' | 'supply' | 'support'>('all');
@@ -18,7 +19,7 @@ export const ServicesPage: React.FC = () => {
       <section className="relative bg-[#0B192C] text-white py-20 lg:py-28 overflow-hidden">
         <div className="absolute inset-0 z-0 opacity-25">
           <img 
-            src="/assets/images/pipe_welders.png" 
+            src={getAssetUrl('assets/images/pipe_welders.png')}
             alt="High-pressure Pipe Welders and Industrial Fabricators" 
             className="w-full h-full object-cover"
           />
@@ -181,7 +182,7 @@ export const ServicesPage: React.FC = () => {
                 <div className="lg:col-span-5">
                   <div className="rounded-2xl overflow-hidden shadow-lg border border-slate-200">
                     <img 
-                      src="/assets/images/pipe_welders.png" 
+                      src={getAssetUrl('assets/images/pipe_welders.png')}
                       alt="Mechanical Pipe Welding in Nigeria" 
                       className="w-full h-[360px] object-cover"
                     />
@@ -198,7 +199,7 @@ export const ServicesPage: React.FC = () => {
                 <div className="lg:col-span-5 order-2 lg:order-1">
                   <div className="rounded-2xl overflow-hidden shadow-lg border border-slate-200">
                     <img 
-                      src="/assets/images/terminal_aerial.png" 
+                      src={getAssetUrl('assets/images/terminal_aerial.png')}
                       alt="Heavy Industrial Construction and Terminal Works" 
                       className="w-full h-[360px] object-cover"
                     />
@@ -295,7 +296,7 @@ export const ServicesPage: React.FC = () => {
                 <div className="lg:col-span-5">
                   <div className="rounded-2xl overflow-hidden shadow-lg border border-slate-200">
                     <img 
-                      src="/assets/images/facility_installation.png" 
+                      src={getAssetUrl('assets/images/facility_installation.png')}
                       alt="Industrial Mechanical Maintenance and Installation" 
                       className="w-full h-[360px] object-cover"
                     />
@@ -312,7 +313,7 @@ export const ServicesPage: React.FC = () => {
                 <div className="lg:col-span-5 order-2 lg:order-1">
                   <div className="rounded-2xl overflow-hidden shadow-lg border border-slate-200">
                     <img 
-                      src="/assets/images/procurement_logistics.png" 
+                      src={getAssetUrl('assets/images/procurement_logistics.png')}
                       alt="Technical Procurement and Logistics Management" 
                       className="w-full h-[360px] object-cover"
                     />
@@ -408,7 +409,7 @@ export const ServicesPage: React.FC = () => {
                 <div className="lg:col-span-5">
                   <div className="rounded-2xl overflow-hidden shadow-lg border border-slate-200">
                     <img 
-                      src="/assets/images/materials_testing.png" 
+                      src={getAssetUrl('assets/images/materials_testing.png')}
                       alt="Industrial Materials Testing and Technical Manpower" 
                       className="w-full h-[360px] object-cover"
                     />

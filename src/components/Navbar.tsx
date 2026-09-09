@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { NavLink, Link } from 'react-router-dom';
 import { Menu, X, ArrowRight, ShieldCheck, Phone, Mail } from 'lucide-react';
+import { getAssetUrl } from '../utils/assets.ts';
 
 export const Navbar: React.FC = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -35,11 +36,10 @@ export const Navbar: React.FC = () => {
           {/* Brand Identity */}
           <Link to="/" className="flex items-center gap-3.5 group">
             <img 
-              src="/assets/images/company_logo.png" 
+              src={getAssetUrl('assets/images/company_logo.png')}
               alt="J&O Technical Services Limited Logo" 
               className="h-11 w-auto object-contain rounded"
               onError={(e) => {
-                // Fallback badge if image fails
                 (e.target as HTMLElement).style.display = 'none';
               }}
             />

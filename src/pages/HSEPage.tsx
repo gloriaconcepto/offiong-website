@@ -10,6 +10,7 @@ import {
   FileText, 
   Leaf
 } from 'lucide-react';
+import { getAssetUrl } from '../utils/assets.ts';
 
 export const HSEPage: React.FC = () => {
   return (
@@ -18,7 +19,7 @@ export const HSEPage: React.FC = () => {
       <section className="relative bg-[#0B192C] text-white py-20 lg:py-28 overflow-hidden">
         <div className="absolute inset-0 z-0 opacity-20">
           <img 
-            src="/assets/images/hse_safety.png" 
+            src={getAssetUrl('assets/images/hse_safety.png')}
             alt="HSE Safety Operations in Nigerian Energy Sector" 
             className="w-full h-full object-cover"
           />
@@ -63,7 +64,7 @@ export const HSEPage: React.FC = () => {
             <div className="lg:col-span-5">
               <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-white/10 bg-slate-800">
                 <img 
-                  src="/assets/images/hse_safety.png" 
+                  src={getAssetUrl('assets/images/hse_safety.png')}
                   alt="HSE Safety Inspection" 
                   className="w-full h-[380px] object-cover"
                 />
@@ -203,7 +204,7 @@ export const HSEPage: React.FC = () => {
             <div className="lg:col-span-6">
               <div className="relative rounded-2xl overflow-hidden shadow-xl border border-slate-200 bg-white">
                 <img 
-                  src="/assets/images/materials_testing.png" 
+                  src={getAssetUrl('assets/images/materials_testing.png')}
                   alt="Industrial Materials Quality Testing" 
                   className="w-full h-[400px] object-cover"
                 />

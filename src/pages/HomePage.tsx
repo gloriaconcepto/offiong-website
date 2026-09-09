@@ -17,6 +17,7 @@ import {
   Clock,
   Sparkles
 } from 'lucide-react';
+import { getAssetUrl } from '../utils/assets.ts';
 
 export const HomePage: React.FC = () => {
   return (
@@ -26,7 +27,7 @@ export const HomePage: React.FC = () => {
         {/* High-Quality Background Image */}
         <div className="absolute inset-0 z-0">
           <img 
-            src="/assets/images/hero_offshore.png" 
+            src={getAssetUrl('assets/images/hero_offshore.png')}
             alt="Offshore Niger Delta Platform Operations" 
             className="w-full h-full object-cover object-center"
           />
@@ -202,7 +203,7 @@ export const HomePage: React.FC = () => {
             <div className="lg:col-span-6">
               <div className="relative rounded-2xl overflow-hidden shadow-xl border border-slate-200 bg-white">
                 <img 
-                  src="/assets/images/boardroom_governance.png" 
+                  src={getAssetUrl('assets/images/boardroom_governance.png')}
                   alt="J&O Technical Services Engineering Leadership Boardroom" 
                   className="w-full h-[400px] object-cover"
                 />
@@ -471,7 +472,7 @@ export const HomePage: React.FC = () => {
             <div className="lg:col-span-5 order-2 lg:order-1">
               <div className="relative rounded-2xl overflow-hidden shadow-xl border border-slate-200">
                 <img 
-                  src="/assets/images/hse_safety.png" 
+                  src={getAssetUrl('assets/images/hse_safety.png')}
                   alt="J&O Technical Services Health Safety and Environment HSE Operations" 
                   className="w-full h-[420px] object-cover"
                 />

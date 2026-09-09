@@ -10,6 +10,7 @@ import {
   CheckCircle2, 
   MapPin
 } from 'lucide-react';
+import { getAssetUrl } from '../utils/assets.ts';
 
 export const AboutPage: React.FC = () => {
   return (
@@ -69,7 +70,7 @@ export const AboutPage: React.FC = () => {
             <div className="lg:col-span-5">
               <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-white/10 bg-slate-800">
                 <img 
-                  src="/assets/images/boardroom_governance.png" 
+                  src={getAssetUrl('assets/images/boardroom_governance.png')}
                   alt="J&O Technical Services Engineering Boardroom" 
                   className="w-full h-[400px] object-cover"
                 />
@@ -324,7 +325,7 @@ export const AboutPage: React.FC = () => {
             <div className="lg:col-span-6">
               <div className="relative rounded-2xl overflow-hidden shadow-xl border border-slate-200 bg-white">
                 <img 
-                  src="/assets/images/supply_yard.png" 
+                  src={getAssetUrl('assets/images/supply_yard.png')}
                   alt="Port Harcourt Fabrication and Logistics Yard" 
                   className="w-full h-[380px] object-cover"
                 />

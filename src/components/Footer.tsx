@@ -10,6 +10,7 @@ import {
   Award,
   ChevronRight
 } from 'lucide-react';
+import { getAssetUrl } from '../utils/assets.ts';
 
 export const Footer: React.FC = () => {
   return (
@@ -21,7 +22,7 @@ export const Footer: React.FC = () => {
           <div className="lg:col-span-4 space-y-5">
             <div className="flex items-center gap-3">
               <img 
-                src="/assets/images/company_logo.png" 
+                src={getAssetUrl('assets/images/company_logo.png')}
                 alt="J&O Technical Services Limited" 
                 className="h-10 w-auto object-contain rounded"
               />
